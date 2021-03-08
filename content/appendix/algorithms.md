@@ -15,7 +15,7 @@ Data is authenticated using `HMAC-SHA256`.
 
 ## Asymmetric Cryptography
 
-_luca_ uses ellitic curves for the required asymmetric cryptography.
+_luca_ uses elliptic curves for the required asymmetric cryptography.
 
 (appendix:algorithms:asymmetric_encryption)=
 ### Encryption
