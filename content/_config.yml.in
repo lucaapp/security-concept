@@ -1,0 +1,35 @@
+title: "Security Concept"
+author: ""
+copyright: "2021"
+logo: resources/luca.png
+latex:
+  latex_documents:
+    targetname: luca_security_concept.tex
+
+sphinx:
+  config:
+    latex_elements.papersize: "a4paper"
+    latex_elements.preamble: "\\setcounter{secnumdepth}{1}"
+
+execute:
+  execute_notebooks: force
+
+html:
+  extra_footer: "<div>
+                   <div style='float: left; width: 32%'>
+                     <p>Document revision: <code>%REVISION%</code><br />
+                        Release date: <code>%RELEASE_DATE%</code></p>
+                   </div>
+                   <div style='float: left; width: 32%'>
+                     <p>culture4life GmbH<br />
+                        Charlottenstraße 59<br />
+                        10117 Berlin
+                     </p>
+                   </div>
+                   <div style='float: left; width: 32%'>
+                     <p><a href='https://luca-app.de/'>Luca Homepage</a><br />
+                        <a href='https://luca-app.de/impressum/'>Impressum</a><br />
+                        <a href='mailto:security@luca-app.de'>security@luca-app.de</a>
+                     </p>
+                   </div>
+                 </div>"

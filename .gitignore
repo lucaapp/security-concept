@@ -1,0 +1,27 @@
+### JupyterNotebooks ###
+# gitignore template for Jupyter Notebooks
+# website: http://jupyter.org/
+
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IPython
+profile_default/
+ipython_config.py
+
+# python virtualenv
+venv/
+*/__pycache__/*
+
+### jupyter-book ###
+_build
+
+# generated _config.yml
+content/_config.yml
+
+# PlantUML
+*.uml
+plantuml.jar
+
+# macOS
+.DS_Store

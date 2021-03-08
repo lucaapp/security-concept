@@ -1,0 +1,44 @@
+- file: intro/landing.md
+
+- part: Introduction
+  chapters:
+    - file: intro/intro.md
+
+- part: System Overview
+  chapters:
+    - file: properties/actors.md
+    - file: properties/assets.md
+    - file: properties/objectives.md
+    - file: properties/secrets.md
+    - file: properties/process_overview.md
+
+- part: Onboarding
+  chapters:
+    - file: processes/venue_registration.md
+    - file: processes/health_department_registration.md
+    - file: processes/daily_key_rotation.md
+    - file: processes/guest_registration.md
+
+- part: Smartphone Use
+  chapters:
+    - file: processes/guest_app_checkin.md
+    - file: processes/guest_self_checkin.md
+    - file: processes/guest_checkout.md
+    - file: processes/additional_data.md
+
+- part: Static Badge
+  chapters:
+    - file: badge/badge_generation.md
+    - file: badge/personalization.md
+    - file: badge/check_in.md
+
+- part: Contact Tracing
+  chapters:
+    - file: processes/tracing_access_to_history.md
+    - file: processes/tracing_find_contacts.md
+
+- part: Appendix
+  chapters:
+    - file: appendix/algorithms.md
+    - file: appendix/planned.md
+    - file: appendix/contact.md
