@@ -3,7 +3,7 @@
 
 **_luca_ Sicherheitskonzept**
 
-_luca_ unterstützt Veranstaltungs- und Restaurantbetreib:innen bei der verpflichtenden Aufnahme der personenbezogenen Daten ihrer Gäste im Rahmen der Bekämpfung der Covid-19-Pandemie.
+_luca_ unterstützt Veranstaltungs- und Restaurantbetreiber:innen bei der verpflichtenden Aufnahme der personenbezogenen Daten ihrer Gäste im Rahmen der Bekämpfung der Covid-19-Pandemie.
 Dabei legt _luca_ besonderen Wert auf den Schutz dieser Daten: Die Daten können weder von Betreiber:innen, noch vom _luca_-System gelesen werden, sondern nur von den Gesundheitsämtern, in dem Falle dass eine Kontaktnachverfolgung wegen einer bestätigten Infektion eines Gastes notwendig wird.
 
 Nutzer:innen von _luca_ erzeugen beim Zutritt so genannte verschlüsselte Check-Ins mit ihrem Smartphone oder einem Schlüsselanhänger.
