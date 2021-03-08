@@ -8,7 +8,7 @@
 daily keypair
 
     The keypair whose public key is used by the {term}`Guest App` to encrypt the secret part of the {term}`Check-In` data.
-    It's private key is used by a {term}`Health Department` during the process of {ref}`Contact Tracing<process:tracing>`.
+    Its private key is used by a {term}`Health Department` during the process of {ref}`Contact Tracing<process:tracing>`.
 
     The keypair's public key is signed using the {term}`HDSKP` and stored on the {term}`Luca Server`.
     Its private key is encrypted for each registered Health Department's {term}`HDEKP`.
@@ -19,7 +19,7 @@ daily keypair
 badge keypair
     The keypair that encrypts {term}`contact data reference`s for static {term}`Badge`s.
     The public key is used exclusively by a {term}`Trusted 3rd Party` during {ref}`the generation of static Badges <badge:static_badge_gen>`.
-    It's private key is owned by the Health Department and is used to decrypt {term}`Check-In`s created using a static Badge.
+    Its private key is owned by the Health Department and is used to decrypt {term}`Check-In`s created using a static Badge.
 
 badge attestation keypair
     This keypair signs static {term}`Badge`s during {ref}`their generation <badge:static_badge_gen>`.
