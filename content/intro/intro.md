@@ -14,7 +14,7 @@ We greatly appreciate your feedback.
 ## Contributors
 
 This document is owned by culture4life GmbH, which is also responsible for the development of _luca_.
-It is continuously developed and reviewed in cooperation with security experts and partners such as neXenio GmbH and Frauenhofer AISEC.
+It is continuously developed and reviewed in cooperation with security experts and partners such as neXenio GmbH and Fraunhofer AISEC.
 
 ## Guarantees Provided by _luca_
 
