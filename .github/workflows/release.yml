@@ -1,0 +1,38 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - '*/*/*-*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: actions/setup-python@v2
+        with:
+            python-version: '3.x'
+
+      - name: Install requirements
+        run: |
+          sudo apt-get install graphviz
+          pip install -U pip
+          pip install -r requirements.txt
+
+      - name: Get plantuml
+        run: |
+          wget -O - "https://sourceforge.net/projects/plantuml/files/1.2021.2/plantuml.1.2021.2.jar/download" > "$(pwd)/plantuml.jar"
+          echo "d3a3eba987f509ce0564faf42b6c5473cdedfbfa866f03177bf04e57cd45bb17 $(pwd)/plantuml.jar" | sha256sum -c -
+
+      - name: Build document
+        run: |
+          PLANTUMLPATH="$(pwd)/plantuml.jar" sh buildhtml.sh
+
+      - name: run gh cli
+        run: |
+          cd "$(pwd)/content/_build/html" || exit 1
+          tar caf luca-security-concept.tar.gz -- *
+          gh release create "$(git describe --tags --exact-match)" "luca-security-concept.tar.gz"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
