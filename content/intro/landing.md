@@ -24,7 +24,7 @@ Neither the owners of event venues nor the _luca_ server can access the end-user
 
 Upon entering a _luca_-enabled venue, a user creates a so-called "encrypted Check-In" using either their smartphone or a simple key fob.
 This Check-In is encrypted in a way that only the public health authorities can read it.
-The encrypted Check-In is then transferred to the venue owner via a QR code, where the Check-In is encrypted once again by the venue owner so that nobody can access the user's personal information at this stage.
+The encrypted Check-In is then encoded as a QR code, scanned by the venue owner's software and encrypted once again so that nobody can access the user's personal information at this stage.
 Now, the venue owner sends this double-encrypted Check-In to the _luca_ server along with a time stamp.
 
 In case a _luca_ user tests positive for SARS-CoV2, the app sends the infected user's epidemiologically relevant check-ins along with the IDs of the affected venues to the _luca_ server.

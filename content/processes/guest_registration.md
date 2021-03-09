@@ -142,7 +142,7 @@ The App then verifies the Guest's phone number.
 For that, the phone number the Guest entered is sent to the {term}`Luca Server`, which then creates a challenge.
 Using an external {term}`SMS Service Provider` a {term}`verification TAN` is sent to that phone number either as an SMS or as a voice call.
 After entering the TAN in the App it is verified by the {term}`Luca Server`.
-The {term}`Luca Server` keeps no record of the Guest's phone number after that [^sms_storage].
+The {term}`Luca Server` keeps no record of the Guest's plaintext phone number after that [^sms_storage].
 
 [^sms_storage]: According to the German "Telekommunikationsgesetz" the SMS Service Provider is legally required to store the messages for 90 days.
 
@@ -224,3 +224,15 @@ However, the Health Department should only learn the epidemiologically relevant 
 To guarantee this, the {term}`Guest App` rotates the {term}`tracing secret` once a day.
 If the Guest is infected, the App transfers all recent, epidemiologically relevant, {term}`tracing secret`s to the {term}`Health Department`.
 As a result, the Health Department can only reconstruct that part of the {term}`Check-In History` which has been created based on the shared {term}`tracing secret`s.
+
+## Security Considerations
+
+### Verification of the Guest's Contact Data
+
+{term}`Guest`'s {term}`Contact Data` is encrypted in _luca's_ client application before being uploaded to the {term}`Luca Server`.
+Hence, _luca_ cannot validate any personal data provided by the {term}`Guest`.
+On the other hand, {term}`Health Department`s are dependent on valid {term}`Contact Data` to be able to contact {term}`Guest`s if necessary.
+
+This poses a trade-off between data validity and personal data protection (cf. {ref}`O1<objective:contact_data>`).
+Therefore, _luca_ merely implements a client-side phone number validation via an SMS TAN process before registering a {term}`Guest` with their encrypted {term}`Contact Data`.
+As with any other client-side check this can be circumvented by manipulating the client software.

@@ -26,6 +26,10 @@ import plantumlmagic
 (process:daily_key)=
 # Daily Keypair Rotation
 
+As {term}`Health Department`s are federated in Germany, they need to share a common keypair (namely the {term}`daily keypair`).
+This keypair is generated and distributed among all {term}`Health Department`s on a daily basis.
+For the distribution, we use the {term}`HDEKP`s (that are uniquely owned by each health department) to encrypt the {term}`daily keypair`'s private key for each {term}`Health Department`. These encrypted private key objects are then uploaded to _luca_.
+
 ## Overview
 
 ```{panels}
