@@ -143,6 +143,58 @@ It fetches the Guests' {term}`encrypted guest data` from the {term}`Luca Server`
 The latter is used to verify the authenticity of both the {term}`Check-In` and the {term}`contact data reference`.
 The {term}`Contact Data` can now be used to contact the {term}`Traced Guest` and inform them that they are at risk of being infected.
 
+## Notifying Guests about Data Access
+
+``````{margin} Example: Notification List
+```{code}
+[
+ {
+  "healthDepartment": {
+   "departmentId": "fb82457a-4add-4a00-b0b9-7dd2db67be15",
+   "name": "Gesundheitsamt X",
+   [...]
+  },
+  "hashedTraceIds": [
+   "D6Bt3ZN2fNEH+bxH3HsV/Q==",
+   "PIaQkt5YGXrZa+5UZIbpVg==",
+   [...]
+  ]
+ },
+ {
+  "healthDepartment": {
+   "departmentId": "92db4ce3-722c-41be-9d16-485898983615",
+   "name": "Geundheitsamt Y",
+   [...]
+  },
+  "hashedTraceIds": [
+   "5Lfdb0muHpzMtTLXFyG6Qw==",
+   [...]
+  ]
+ },
+ [...]
+]
+```
+``````
+
+Both for transparency reasons and as an early warning of a potential SARS-CoV2 exposure, _luca_ automatically informs the {term}`Traced Guest` about the data access by a {term}`Health Department`.
+
+To implement this notification in a privacy-preserving manner, the {term}`Luca Server` publishes lists of hashed {term}`trace ID`s affected by contact tracing activities of a {term}`Health Department`.
+Specifically, it maintains one list per {term}`Health Department`.
+
+{term}`Guest App`s download these lists on a regular basis and check their recently used {term}`trace ID`s (which the app keeps track of locally) against them.
+If a match is found, the {term}`Guest App` (and of course the {term}`Traced Guest`) learns (a) that a data access by the {term}`Health Department` took place and (b) which {term}`Health Department`(s) gained access to their personal data.
+
+The {term}`trace ID`s are hashed and truncated to 16 bytes by the {term}`Luca Server` before being published:
+
+```{code}
+hashed_trace_id = HMAC-SHA256(data=trace_id, key=health_department_id).truncate(16)
+```
+
+to conceal that {term}`trace ID`s might appear in more than one {term}`Health Department` list.
+Naturally, the {term}`Guest App` must hash its locally stored {term}`trace ID`s the same way before matching them with the notification lists.
+
+Published {term}`trace ID`s are removed from these lists after four weeks.
+
 ## Security Considerations
 
 ### Authentication of Contact Data and Check-Ins
@@ -164,3 +216,7 @@ Neither the {term}`Luca Server` nor another {term}`Health Department` can distin
 Note that the {term}`Health Department` does not know {term}`Traced Guest`s' {term}`tracing secret`s here.
 Hence, the forged {term}`Check-In`s would not appear in the Guest's {term}`Check-In History`.
 They would, however, appear whenever the forged {term}`Check-In` coincides in time and place with another {term}`Traced Guest`'s {term}`Check-In`.
+
+### Access Notification Lists reveal the Number of Traced IDs
+
+The number of hashed {term}`trace ID`s in the above-described access notification lists reveals the number of {term}`Check-In`s recently accessed by any {term}`Health Department`.
