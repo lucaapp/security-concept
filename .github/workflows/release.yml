@@ -1,9 +1,9 @@
 name: Create Release
 
 on:
-  push:
-    tags:
-      - '*/*/*-*'
+  release:
+    types:
+      - created
 
 jobs:
   build:
@@ -33,6 +33,6 @@ jobs:
         run: |
           cd "$(pwd)/content/_build/html" || exit 1
           tar caf luca-security-concept.tar.gz -- *
-          gh release create "$(git describe --tags --exact-match)" "luca-security-concept.tar.gz"
+          gh release upload "$(git describe --tags --exact-match)" "luca-security-concept.tar.gz"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
