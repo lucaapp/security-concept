@@ -88,6 +88,13 @@ Eventually, the relevant information is encoded into a QR code and printed on a 
 
 The {term}`Badge Generator` runs the following algorithm to generate a {term}`Badge`:
 
+```{margin} Badge Keypair Generation
+To create a badge-specific keypair, the given buffer (`level_one[32:64]`) is interpreted as a private EC point.
+The associated public key is derived to form an EC key pair.
+In the extremely unlikely event that the big-integer value in the buffer is greater than the EC group's order, the underlying entropy value cannot be used as a badge serial number and is skipped.
+The described logic is left out of the pseudo-code for simplicity.
+```
+
 ```{code} python
 # pseudocode
 
