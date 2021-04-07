@@ -3,6 +3,10 @@
 This is the document source of luca's security concept.
 Please go here for the HTML version: https://luca-app.de/securityconcept
 
+## Luca Source Code
+
+Please find our project on GitLab for the source code: https://gitlab.com/lucaapp
+
 ## Getting in Touch
 
 We're interested in your feedback! Please start discussions or participate in the ["Discussions" section](https://github.com/lucaapp/security-concept/discussions) of this repository.
