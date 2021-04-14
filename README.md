@@ -3,52 +3,12 @@
 This is the document source of luca's security overview.
 Please go here for the HTML version: https://luca-app.de/securityconcept
 
-## Luca Source Code
+# This Repository is Archived
 
-Please find our project on GitLab for the source code: https://gitlab.com/lucaapp
+We have moved this document to GitLab to live together with the project's code base. Please find the document here from now on: https://gitlab.com/lucaapp/security-overview
 
-## Getting in Touch
+Existing issues and discussions in the archived repository will remain visible. Please use the GitLab repository's issue function to [open a new issue](https://gitlab.com/lucaapp/security-overview/-/issues/new).
 
-We're interested in your feedback! Please start discussions or participate in the ["Issues" section](https://gitlab.com/lucaapp/security-overview/-/issues) of this repository.
+## Reporting Security Issues
 
-Despite the document's language being English, please feel free to open discussions in either German or English. Whatever you're more comfortable with.
-
-## Building the Document
-
-This document is written as a `jupyter-book`. Install the python requirements via `pip`:
-
-```sh
-pip install -r requirements.txt
-```
-
-To render the diagrams you need `plantuml`. Install it via your package manager or download the `.jar` file directly:
-
-```sh
-wget -O - "http://sourceforge.net/projects/plantuml/files/plantuml-nodot.1.2021.1.jar/download" > plantuml.jar
-```
-
-Finally, run the `buildhtml.sh` from this directoy:
-
-```sh
-./buildhtml.sh
-```
-
-### Rendering a PDF
-
-You can render a PDF document using LaTeX. First, install LaTeX on your system. Currently you will need to run `./buildhtml.sh` once, to set up jupyter-book's `_config.yml` and then run:
-
-```sh
-PLANTUMLPATH='<your path to plantuml.jar>' PLANTUMLFORMAT='png' jupyter-book build content --builder pdflatex
-```
-
-## Style Guidelines
-
-Please adhere to the following rules when editing this document:
-
- * in text blocks, write one sentence per line in the markdown file for Git-friendliness
- * section headlines should have a [Target Header marker](https://jupyterbook.org/reference/cheatsheet.html#target-headers) following the form `(chapter:section)=` (e.g. `(process:location_registration)=`)
- * prefer [List Tables](https://jupyterbook.org/reference/cheatsheet.html#tables) over markdown tables
- * use underscores `_` instead of spaces in file names
- * don't skip header levels (i.e. no `###` outside `#` and `##`)
- * use exactly one first level header (`#`) per page
- * Python code must be [black](https://github.com/psf/black) formatted
+If you spot a security issue in luca, please contact us directly at security@luca-app.de.
