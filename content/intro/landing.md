@@ -1,7 +1,7 @@
 (intro:landing)=
-# _luca_ Security Concept
+# _luca_ Security Overview
 
-**_luca_ Sicherheitskonzept**
+**_luca_ Sicherheitsübersicht**
 
 _luca_ unterstützt Veranstaltungs- und Restaurantbetreiber:innen bei der verpflichtenden Aufnahme der personenbezogenen Daten ihrer Gäste im Rahmen der Bekämpfung der Covid-19-Pandemie.
 Dabei legt _luca_ besonderen Wert auf den Schutz dieser Daten: Die Daten können weder von Betreiber:innen, noch vom _luca_-System gelesen werden, sondern nur von den Gesundheitsämtern, in dem Falle dass eine Kontaktnachverfolgung wegen einer bestätigten Infektion eines Gastes notwendig wird.
@@ -15,7 +15,7 @@ Wird bei einer Nutzerin eine Infektion mit SARS-CoV2 festgestellt, sendet die _l
 _luca_ fordert von allen diesen Betreiber:innen eine Entschlüsselung der Daten der Gäste an, die sich in der betreffenden Zeit ebenfalls eingecheckt haben, d.h. _luca_ erhält die mit dem Schlüssel des Gesundheitsamtes verschlüsselten Daten der Nutzer:innen.
 Diese Daten werden dann von _luca_ an das zuständige Gesundheitsamt übermittelt, das hieraus die Daten entschlüsseln und damit die Nutzer:innen kontaktieren kann.
 
-**_luca_ Security Concept**
+**_luca_ Security Overview**
 
 Due to the Covid-19 pandemic, restaurants, event venues and other public locations are required by law to collect the contact information of their guests.
 _luca_ aims to simplify this process while putting an emphasis on personal data protection.

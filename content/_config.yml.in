@@ -1,10 +1,10 @@
-title: "Security Concept"
+title: "Security Overview"
 author: ""
 copyright: "2021"
 logo: resources/luca.png
 latex:
   latex_documents:
-    targetname: luca_security_concept.tex
+    targetname: luca_security_overview.tex
 
 sphinx:
   config:

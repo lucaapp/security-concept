@@ -3,7 +3,7 @@
 
 ## GitHub
 
-Feel free to start and contribute to discussions on the ["Discussions" page on GitHub](https://github.com/lucaapp/security-concept/discussions).
+Feel free to start and contribute to discussions on the ["Issues" page on GitLab](https://gitlab.com/lucaapp/security-overview/-/issues).
 
 ## Security Related Issues
 
